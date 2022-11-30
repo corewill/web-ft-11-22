@@ -57,11 +57,13 @@ def NPC_action():
 
 def Battle(NPCvillain, Hero):
     Battle_wages = True
-    while Battle_wages == True:
+
+    while Battle_wages:
 
         print("Available Actions:")
         print("1) Tackle - Causes moderate damage.")
-        print("2) Slash - high or low damage, ")
+        print("2) Slash - high or low damage, "
+                "depending on your luck!")
         print("3) Pray - The creators's spare your soul and heal you to fight another day.")
         move = Player_action()
 
@@ -83,25 +85,19 @@ def Battle(NPCvillain, Hero):
                 if (response.lower() == "n"):
                     break
                 if (response.lower()=='y'):
-                    Goblin = Character('Goblin',100,17, 0)
-                    Terminator = Character('Terminator',50,25, 0)
-                    Breserker = Character('breserker',200,10, 0)
-                    enemyList = [Goblin, Terminator, Breserker]
-                    NPCvillain = random.choice(enemyList)
-                    Hero = Character({Hero.name},100, 50, 0)
                     Battle(NPCvillain, Hero)
                 
         else:
             print ("The input was not valid. Please select a choice again.")
         
-    if  (NPCvillain.vitals == 0):
-        print(f"Congratulations, you beat {NPCvillain.name}!")
-        Hero.wins += 1
-        Battle_wages = False
-    if  (Hero.vitals == 0):
-        print(f"Oh no! you've been beat by{NPCvillain.name}!")
-        NPCvillain.wins += 1
-        Battle_wages = False 
+        if  (NPCvillain.vitals == 0):
+            print(f"Congratulations, you beat {NPCvillain.name}!")
+            Hero.wins += 1
+            Battle_wages = False
+        if  (Hero.vitals == 0):
+            print(f"Oh no! you've been beat by{NPCvillain.name}!")
+            NPCvillain.wins += 1
+            Battle_wages = False
 
 def start_game():
     print("the Battle")
@@ -118,13 +114,6 @@ def start_game():
     keep_playing = True
 
     while (keep_playing is True):
-        Goblin = Character('Goblin',100,17, 0)
-        Terminator = Character('Terminator',50,25, 0)
-        Breserker = Character('breserker',200,10, 0)
-        enemyList = [Goblin, Terminator, Breserker]
-        NPCvillain = random.choice(enemyList)
-        Hero = Character(Hero.name,100, 50, 0)
-        Battle(NPCvillain, Hero)
         print("Current Score:")
         print(f"{Hero.name} - {Hero.wins}")
         print(f"{NPCvillain.name} - {NPCvillain.wins}")
