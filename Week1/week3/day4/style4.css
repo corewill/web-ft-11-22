@@ -1,0 +1,23 @@
+
+
+
+
+ul {list-style-type: none;}
+.b1 {font-family: Verdana, sans-serif;
+    
+
+}
+
+table {
+    border-collapse: collapse;
+    background: white;
+    color: rgb(43, 4, 218);
+}
+th, td { 
+    font-weight: bold;
+}
+
+<table bgcolor="lightgrey" align="center" 
+    cellspacing="21" cellpadding="21">  
+
+}

@@ -1,0 +1,64 @@
+h1 {color: blue;}
+
+.container {
+    display: grid;
+    border: 2px solid purple;
+    
+}
+.third {
+    border: 2px solid purple;
+}
+
+.top {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "body main"
+    "footer main"
+    ;
+    /*grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto;*/
+
+    gap: 1px 20px;
+    padding: 20px;
+    
+}
+
+.header {
+    grid-area: header;
+    border: 1px solid cornflowerblue;
+
+}
+
+.footer {
+    grid-area: footer;
+    border: 1px solid cornflowerblue;
+
+}
+
+.body {
+    grid-area: body;
+    border: 1px solid cornflowerblue;
+
+}
+
+.main {
+    grid-area: main;
+    border: 1px solid cornflowerblue;
+    
+}
+
+.footer
+.header
+.body
+.main
+    display:
+
+.center {
+height: 90px;
+width: 305px;
+display: grid;
+border: 1px solid black;
+place-items: center;
+
+}
