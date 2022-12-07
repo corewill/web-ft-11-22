@@ -21,4 +21,4 @@ function problem(arr) {
     return newArr;
 
     }
-    problem(numbers)
+    problem(numbers) 
