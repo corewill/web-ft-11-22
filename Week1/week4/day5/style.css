@@ -1,0 +1,18 @@
+.topContainer {
+    display: grid;
+    grid-template-rows: center;
+    background-color: aquamarine;
+    text-align: center;
+    
+}
+
+.card {
+    display: grid;
+    grid-template-columns: center;
+    text-align: center
+}
+
+.body {
+    background-color: black;
+    
+}
