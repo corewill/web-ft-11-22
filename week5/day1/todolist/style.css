@@ -1,0 +1,38 @@
+body {
+    margin: 0%;
+    background-color: aliceblue;
+    
+}
+
+h1{
+    color: brown;
+    text-align: center;
+}
+
+div{
+    margin: 16px;
+    padding: 8px;
+    width: 60%;
+    background-color: blue;
+    text-align: center;
+    
+
+}
+
+#maincontainer {
+    margin: 24px;
+    padding: 24px;
+    
+    background-color: blue;
+    text-align: center;
+}
+
+#input{
+   
+    text-align: center;
+
+}
+
+ul{
+    list-style-type: none;
+}

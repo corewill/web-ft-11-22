@@ -30,7 +30,7 @@ print(Students[0])
     #5b print the last item from the list(bonus for more than one way)
 
 print(Students[4])
-print(Students[-3]) 
+print(Students[-1]) 
 
     #5c How do I get the third item from the list?
 
@@ -42,19 +42,31 @@ print(Students)
 
     #5e add "is cool" to the end of each name
 
+for student in Students:
+    print(f"{student} is cool")
+    print(student+"is cool")
 
+    # 46 is interpolation need f {}
+    # 47 is concatonation needs +
 
     #5f if the students name is your name add "IT ME!!" to the end
 
-
+for student in Students:
+    if student == "Corey":
+        print(student+"IT ME!!")
 
     #5g if you are not in the list print "I guess I'm not cool"
 
 
+    if "Corey" not in Students:
+        print("I guess I'm not cool")
+
+        
 
     #5h list some methods to remove things from a list
 
-remove(Students[])
+student.remove(0)
+# remove(Students[])
 
 
 #6 Create a dictionary with keys "Digital Crafts" ,"Instructor", "TA" and values "Bootcamp" ,"Joe" ,"Ethan"
@@ -63,13 +75,13 @@ Set = {"Digital Crafts":"Bootcamp", "Instructor":"Joe", "TA":"Ethan"}
     
     #6a return the value of "Digital Crafts"
 
-print(Set["Bootcamp"])
+print(Set["Digital Crafts"])
 
 
 #7 Write a class named Cars with attributes make,model,year, and type(sedan,truck,crossover, sportscar, etc....)
 
     
-Class Cars:
+class Cars:
     def __init__ (self, make, model, year, type):
             self.make = make
             self.model = model
@@ -80,21 +92,25 @@ Class Cars:
     
     
     #7a Instantiate 3 new Cars
+Fleet =  []
 
-fleet = Cars()
-fleetlist = "car1", "car2", "car3"    
+Coreys_car = Cars("infinity","G35",2007,"sedan")  
+Coreys_car2 = Cars("infinity","G35",2003,"sedan")  
+Coreys_car3 = Cars("infinity","G35",2004,"sedan")  
     
     #7b Add a method that allows you to see the make and model of a car in your terminal
 
 
 
     def aboutcar(self):
-        for vehicle in fleet:
-        Print(self.make, self.model, self.year, self.type)
+        print(f"{self.make}: {self.model}")
+
 
 
     #7c Use the above method on the second car
 
+    Coreys_car2.aboutcar()
+    
     #7d Add a method that is called "honkHorn" that prints "Beep Beep"
 
 
