@@ -10,6 +10,7 @@ const makeDeck = (rank, suit) => {
     pointValue: rank > 10 ? 10 : rank,
   };
   deck.push(card);
+  console.log(deck);
 };
 
 for (let suit of suits) {
@@ -19,5 +20,4 @@ for (let suit of suits) {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  // Execute after page load
-});
+  });
