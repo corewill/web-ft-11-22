@@ -5,7 +5,7 @@ const equals = document.querySelector("total")
 
 const numbersToAdd = [];
 
-cost calculation = (handleclick) => {
+const calculation = (handleclick) => {
     numbersToAdd.push(handleclick);
     console.log(numbersToAdd)
 };
