@@ -7,10 +7,11 @@
     z-index: 100;
 } */
 
-/* :root {
+:root {
     font-size: 14px;
     font-family: "open sans", sans-serif;
-} */
+    
+}
 
 
 
@@ -22,7 +23,7 @@ body{
     background: #000 url(bgimg1pu.avif)  no-repeat center;
     background-size: 100%;
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
     position: absolute ;
     padding: 0;
     margin: 0;
@@ -38,19 +39,21 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #fff;
+    background: #F0EAD6;
 }
 
 
 
 
 .mainCont {
-    
+    display: flex;
+    flex-direction: row;
 
 
     
     
-    height: 100vh;
+    height: 100%;
+    
 }
 
 
@@ -59,11 +62,11 @@ body::-webkit-scrollbar-thumb {
     width: 5rem;
     height: 100vh;
     position: fixed;
-    background: #000;
+    background: rgb(48, 42, 42);
 }
 
 .navBar-nav {
-    list-style: none;
+    list-style-position: inside;
     padding: 0;
     margin: 0;
     display: flex;
@@ -77,14 +80,14 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     flex-direction: column;
     height: 5rem;
-    color: #fff;
+    color: #F0EAD6;
     text-decoration: none;
     text-transform: uppercase;
     margin-top: 1rem;
   
 }
 
-.link-text {
+/* .link-text {
     
     margin-top: 1rem;
 }
@@ -97,34 +100,44 @@ body::-webkit-scrollbar-thumb {
 .nave-link:hover .link-text {
     display: block;
 
-}
+} */
 
 
 
 
 
   .topCardContainer {
-    margin-left: 6rem;
-  }
-
-/* .navBar-link {
     display: flex;
+    flex-direction: row;
+    
     align-items: center;
-    height: 5rem;
     width: 100%;
-    padding: 1rem;
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 300;
-    font-size: 1.2rem;
-    transition: all .3s ease-in-out;
-} */
+    flex-direction: column;
+    margin-left: 6rem;
+    
+  }
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.paragraph {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: fit-content;
+}
 
 .header h2 {
-    color: #fff;
+    color: #F0EAD6;
     font-size: 50px;
     font-weight: 300;
     text-align: center;
@@ -137,7 +150,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .header p {
-    color: #fff;
+    color: #F0EAD6;
     font-size: 20px;
     font-weight: 300;
     text-align: center;
@@ -145,18 +158,88 @@ body::-webkit-scrollbar-thumb {
     padding: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.searchField {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    
+}
+
+.searchButton {
+    
+    margin: 5px;
+    padding: 0;
+    border: 1px solid #F0EAD6;
+    border-radius: 5px;
+    outline: none;
+    background: rgb(34, 170 ,163);
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.clearButton {
+    margin: 5px;
+    padding: 0;
+    border: 1px solid #F0EAD6;
+    border-radius: 5px;
+    outline: none;
+    background: orange;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.inputField {
+    
+    margin: 5px;
+    padding: 0;
+    border: 1px solid #F0EAD6;
+    border-radius: 5px;
+    outline: none;
+    text-align: center; 
+    
+    
+
+}
+
+img {
+    
+    width: 500px;
+   
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
     margin-bottom: 20px;
 }
 
-
 @media (width <= 600px) {
+    
+    .mainCont {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    
+    .header h2 {
+        font-size: 30px;
+    }
+
     .inputField {
-        width: 50%;
+        width: 30%;
         height: 30px;
-        margin: 0;
+        margin: 5px;
         padding: 0;
         margin-bottom: 20px;
-        border: 1px solid #fff;
+        border: 1px solid #F0EAD6;
         border-radius: 5px;
         outline: none;
         text-align: center; 
@@ -164,21 +247,84 @@ body::-webkit-scrollbar-thumb {
         
     
     }
-    }
-  
 
+
+    .navB {
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        height: 4rem;
+        background: rgb(48, 42, 42);
+    }
+ 
+    .navBar-nav {
+        display: flex;
+        flex-direction: row;
+        height: 4rem;
+        width: 100vw;
+        justify-content: space-evenly;
+       
+        
+
+    }
+
+  
+.mainCont {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100%;
+        
+      }
+    
+      .navB {
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        height: 4rem;
+        background: rgb(48, 42, 42);
+        z-index: 9;
+      }
+
+
+
+    .topCardContainer {
+        margin-left: 0;
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+        
+        
+        
+      }
+}
 
     @media (width <= 600px){
         .searchButton {
-            width: 30%;
+            width: 20%;
             height: 30px;
-            margin: 0;
+            margin: 5px;
             padding: 0;
             margin-bottom: 20px;
-            border: 1px solid #fff;
+            border: 1px solid #F0EAD6;
             border-radius: 5px;
             outline: none;
             background: rgb(34, 170 ,163);
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+        }
+
+        .clearButton {
+            width: 20%;
+            height: 30px;
+            margin: 5px;
+            padding: 0;
+            margin-bottom: 20px;
+            border: 1px solid #F0EAD6;
+            border-radius: 5px;
+            outline: none;
+            background: orange;
             color: #000;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -194,6 +340,7 @@ body::-webkit-scrollbar-thumb {
     /* align-items: center; */
     /* width: 1200px; */
     flex-wrap: wrap;
+    
 }
 
 
@@ -219,13 +366,13 @@ body::-webkit-scrollbar-thumb {
     font-weight: 300;
 }
 .exersiseCard h4 {
-    color: #fff;
+    color: #F0EAD6;
     font-weight: 300;
     margin: 2px;
 }
 
 .exersiseCard p {
-    color: #fff;
+    color: #F0EAD6;
     font-weight: 300;
     overflow: hidden;
     margin-bottom: 10px;
@@ -245,7 +392,7 @@ body::-webkit-scrollbar-thumb {
     display: inline-block;
     text-align: center;
     text-transform: capitalize;
-    color: #fff;    
+    color: #F0EAD6;    
     cursor: pointer;
 }
 
@@ -271,3 +418,6 @@ body::-webkit-scrollbar-thumb {
 .exersiseCard.active::before {
     display: none;
 }
+
+
+

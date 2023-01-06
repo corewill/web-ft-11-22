@@ -11,7 +11,7 @@ var requestOptions = {
 
 const getMuscleData = async () => {
 
-  const contentBox = document.querySelector(".contentBox");
+  let contentBox = document.querySelector(".contentBox");
   contentBox.innerHTML = "";
   const inputField = document.querySelector(".inputField").value.replace(/\s/g, "+")
   console.log(inputField)
@@ -53,6 +53,7 @@ contentBox.append(exersiseCard)
     
   }
 
+
 }
 
 
@@ -61,6 +62,11 @@ const searchButton = document.querySelector(".searchButton");
   
   searchButton.addEventListener("click", getMuscleData);
 
+
+
+  const clearButton = document.querySelector(".clearButton");
+  
+  clearButton.addEventListener("click", function() {location.reload()});
 // let preloader = document.getElementById(preloader);
 
 // var loader = document.getElementById("preloader")
