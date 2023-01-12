@@ -13,7 +13,7 @@ const getMuscleData = async () => {
 
   let contentBox = document.querySelector(".contentBox");
   contentBox.innerHTML = "";
-  const inputField = document.querySelector(".inputField").value.replace(/\s/g, "+")
+  const inputField = document.querySelector(".inputField").value.replace(/\s/g, "_")
   console.log(inputField)
   const muscleData = await fetch(`https://api.api-ninjas.com/v1/exercises?muscle=${inputField}`, requestOptions)
   const json = await muscleData.json();

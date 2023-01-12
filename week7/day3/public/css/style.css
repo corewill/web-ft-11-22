@@ -1,0 +1,37 @@
+.jumbotron {
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center ;
+    margin: 1rem;
+    background: green;
+
+
+}
+
+.details{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1rem;
+    background: green;
+}
+
+img {
+
+}
+
+h1 {
+    color: red;
+}
+
+
+h2 {
+    color: red;
+}

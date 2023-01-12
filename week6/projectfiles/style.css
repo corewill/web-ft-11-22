@@ -178,8 +178,8 @@ body::-webkit-scrollbar-thumb {
     border: 1px solid #F0EAD6;
     border-radius: 5px;
     outline: none;
-    background: rgb(34, 170 ,163);
-    color: #000;
+    background: #22aaa3;
+    color: #000000;
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
@@ -187,10 +187,10 @@ body::-webkit-scrollbar-thumb {
 .clearButton {
     margin: 5px;
     padding: 0;
-    border: 1px solid #F0EAD6;
+    border: 1px solid #f0ead6;
     border-radius: 5px;
     outline: none;
-    background: orange;
+    background: #ffa500;
     color: #000;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -282,7 +282,7 @@ img {
         bottom: 0;
         width: 100vw;
         height: 4rem;
-        background: rgb(48, 42, 42);
+        background: #302a2a;
         z-index: 9;
       }
 
@@ -386,7 +386,7 @@ img {
 .exersiseCard .more  {
     position: relative;
     padding: 10px 15px;
-    background: rgb(11, 45, 109);
+    background: #0b2d6d;
     margin-top: 15px;
     width: 75px;
     display: inline-block;

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/newpagehead'); %>
+</head>
+
+<body class="container">
+    <div class="page">
+        <nav>
+            <%- include('../partials/header'); %>
+        </nav>
+
+        <main class="subContainer">
+            
+            
+            <div class="jumbotron">
+                <div class="topSearch">
+                    <button class="searchButton">S</button>
+                    <input class="inputField" type="text" placeholder="Search"> 
+                        
+                </div>
+
+                <div><h3>Overview</h3></div>
+                <div class="title">
+                    <h2 class="amountBox">Account Balance:
+                        <%= accountBalance.amount %>
+                    </h2>
+                    <h2 class="amountBox">Amount Pending:
+                        <%= pending.amount %>
+                    </h2>
+                    <h2 class="amountBox">Amount Processed:
+                        <%= processedData.amount %>
+                    </h2>
+                    <!-- <h2>
+                        <%= data[0].name %>
+                    </h2>
+                    <h2> -->
+                    
+                </div>
+                <div class="details">
+                    <div class="content">
+                        <div class="detailsBox">
+                            <H4>Recent Activity</H4>
+                        </div>
+                        <div class="detailsBox1">
+                            <div>Member</div>
+                            <div>Balance</div>
+                            <div>Email</div>
+                            <div>Phone</div>
+                            <div>Company</div>
+                        </div>
+                        <div class="detailsBox">
+                            <p>
+                                <%= data[0].name %>
+                            </p>
+                            <p>
+                                <%= data[0].balance %>
+                            </p>
+                            <p>
+                                <%= data[0].email %>
+                            </p>
+                            <p>
+                                <%= data[0].phone %>
+                            </p>
+                            <p>
+                                <%= data[0].Company %>
+                            </p>
+                        </div>
+                        <div class="detailsBox">
+                            <p>
+                                <%= data[1].name %>
+                            </p>
+                            <p>
+                                <%= data[1].balance %>
+                            </p>
+                            <p>
+                                <%= data[1].email %>
+                            </p>
+                            <p>
+                                <%= data[1].phone %>
+                            </p>
+                            <p>
+                                <%= data[1].company %>
+                            </p>
+                        </div>
+                        <div class="detailsBox">
+                            <p>
+                                <%= data[2].name %>
+                            </p>
+                            <p>
+                                <%= data[2].balance %>
+                            </p>
+                            <p>
+                                <%= data[2].email %>
+                            </p>
+                            <p>
+                                <%= data[2].phone %>
+                            </p>
+                            <p>
+                                <%= data[2].company %>
+                            </p>
+                        </div>
+                        <div class="detailsBox">
+                            <p>
+                                <%= data[3].name %>
+                            </p>
+                            <p>
+                                <%= data[3].balance %>
+                            </p>
+                            <p>
+                                <%= data[3].email %>
+                            </p>
+                            <p>
+                                <%= data[3].phone %>
+                            </p>
+                            <p>
+                                <%= data[3].company %>
+                            </p>
+                        </div>
+                        <div class="detailsBox">
+                            <p>
+                                <%= data[4].name %>
+                            </p>
+                            <p>
+                                <%= data[4].balance %>
+                            </p>
+                            <p>
+                                <%= data[4].email %>
+                            </p>
+                            <p>
+                                <%= data[4].phone %>
+                            </p>
+                            <p>
+                                <%= data[4].company %>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sideBar">
+                        <div class="smallBox">
+                            content
+
+                        </div>
+                        <div class="smallBox">
+                            content
+                        </div>
+                    </div>
+                    <h2>
+                        
+                    </h2>
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+</html>
