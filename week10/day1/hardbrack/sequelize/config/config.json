@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "vqlsazzd",
+    "password": "P1azdSKFbypdw73BM-hev8uiHDWdtuQF",
+    "database": "vqlsazzd",
+    "host": "baasu.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "vqlsazzd",
+    "password": "P1azdSKFbypdw73BM-hev8uiHDWdtuQF",
+    "database": "vqlsazzd",
+    "host": "baasu.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "vqlsazzd",
+    "password": "P1azdSKFbypdw73BM-hev8uiHDWdtuQF",
+    "database": "vqlsazzd",
+    "host": "baasu.db.elephantsql.com",
+    "dialect": "postgres"
+  }
+}

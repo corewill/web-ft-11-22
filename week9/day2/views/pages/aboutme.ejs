@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/aboutmehead'); %>
+</head>
+
+<body class="container">
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            
+            <div class="title">
+                <h2>
+                    <%= me.name %>
+                </h2>
+                <h2>
+                    <%= me.occupation %>
+                </h2>
+            </div>
+            <div class="details">
+                <img class="img-thumbnail" src=<%=me.pic %> alt="" srcset="">
+                <h2>
+                    <%= me.city %>
+                </h2>
+                <p>
+                    <%= me.favColor %>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+</html>
