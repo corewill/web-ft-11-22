@@ -4,7 +4,7 @@ const PORT = 3006;
 const data = require("./data")
 
 // middleware
-app.use(express.static(__dirname + "/public"))
+app.use(express.static(__dirname + "public"))
 app.set("view engine", "ejs")
 // middleware
 
