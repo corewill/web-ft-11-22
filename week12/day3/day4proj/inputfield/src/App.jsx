@@ -1,16 +1,18 @@
-import { useState } from 'react'
-import InputField from './components/InputField.jsx'
-import './App.css'
+import React from "react";
+import InputField from "./components/InputField.jsx";
+import ContactForm from "./components/ContactForm.jsx";
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <h3>Input</h3>
-      <InputField />
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<InputField />} />
+      <Route path="/contact" element={<ContactForm />} />
+      {/* <Route path="*" element={<ErrorPage />} /> */}
+    </Routes>
+  );
 }
 
-export default App
+export default App;

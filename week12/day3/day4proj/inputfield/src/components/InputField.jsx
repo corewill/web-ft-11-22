@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { createClient } from "@supabase/supabase-js";
+// import { link } from "react-router-dom";
 const supabaseUrl = "https://ruuwcpnrzznakaolxacc.supabase.co";
-const supabaseKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzNDA1Njg0NiwiZXhwIjoxOTQ5NjMyODQ2fQ.G4A-G6QMJ_mVnSFjAu6UfU5hx8a4IMC2ENO2qli1eT4";
+const supabaseKey = import.meta.env.VITE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 function InputField() {
@@ -18,9 +18,10 @@ function InputField() {
     console.log(error);
   };
   async function pushForm(signUpForm) {
-
     fetchData();
-    const { data, error } = await supabase.from("reactUserData2").insert(signUpForm);
+    const { data, error } = await supabase
+      .from("reactUserData2")
+      .insert(signUpForm);
     console.log(data);
     console.log(error);
   }
@@ -39,10 +40,10 @@ function InputField() {
   };
 
   const authentication = () => {
-    // if (signUpForm?.username?.length < 6 || signUpForm?.username?.length > 14) {
-    //   toast("Enter a username with 6-14 characters, inclusive.");
-    //   return;
-    // }
+    if (signUpForm?.username?.length < 6 || signUpForm?.username?.length > 14) {
+      toast("Enter a username with 6-14 characters, inclusive.");
+      return;
+    }
     if (signUpForm?.zip?.length !== 5) {
       toast("Enter a 5-digit zip code.");
       return;
@@ -223,6 +224,13 @@ function InputField() {
               >
                 SUBMIT
               </button>
+              {/* <Link
+                className="bg-[#D44D78] text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline mx-auto p-4"
+                type="button"
+                onClick={authentication}
+              >
+                SUBMIT
+              </Link> */}
             </div>
           </form>
         </div>
